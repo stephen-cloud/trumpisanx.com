@@ -97,3 +97,18 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+# Compile list of lies
+
+Download the lies from <https://www.washingtonpost.com/graphics/politics/trump-claims-database/csv/wapo_trumpclaims_export-012021.csv.zip>
+
+```
+npm install csv-parser -g
+```
+
+Then
+
+```
+csv-parser data/wapo_trumpclaims_export-012021.csv | jq -cs > data/lies.json
+```
+

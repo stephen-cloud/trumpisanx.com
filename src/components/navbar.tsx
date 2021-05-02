@@ -1,10 +1,13 @@
-import { Box, Flex, Heading, Link, Spacer } from "@chakra-ui/react"
+import { MoonIcon, SunIcon } from "@chakra-ui/icons"
+import { Button, ButtonGroup, Flex, Heading, Link, Spacer, useColorMode, useColorModeValue } from "@chakra-ui/react"
 import { Link as GatsbyLink } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import ThemeToggle from "./toggle-theme"
 
-function NavBar({ siteTitle , ...rest}) {
+function NavBar({ siteTitle, ...rest }) {
+  const { toggleColorMode: toggleMode } = useColorMode()
+  const text = useColorModeValue(<MoonIcon />, <SunIcon />)
+
   return (
     <Flex as="header" {...rest}>
       <Heading >
@@ -17,7 +20,9 @@ function NavBar({ siteTitle , ...rest}) {
         </Link>
       </Heading>
       <Spacer />
-      <ThemeToggle />
+      <ButtonGroup variant="link" spacing={6}>
+        <Button aria-label="toggle light dark mode" onClick={toggleMode}>{text}</Button>
+      </ButtonGroup>
     </Flex>
   )
 }

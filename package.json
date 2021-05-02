@@ -10,6 +10,7 @@
     "@chakra-ui/react": "^1.1.4",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "@types/node": "^15.0.1",
     "fontsource-open-sans": "^4.0.0",
     "framer-motion": "^3.2.1",
     "gatsby": "^2.26.1",
@@ -21,12 +22,14 @@
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-transformer-sharp": "^2.6.0",
     "gh-pages": "^3.1.0",
+    "neat-csv": "^6.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "csv-parser": "^3.0.0",
     "prettier": "2.2.1"
   },
   "keywords": [
